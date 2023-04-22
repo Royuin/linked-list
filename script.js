@@ -13,5 +13,8 @@ function linkedListFactory() {
     append: function (value) {
       this.tail = nodeFactory(value);
     },
+    prepend: function (value) {
+      this.head = nodeFactory(value, this.head);
+    },
   };
 }
