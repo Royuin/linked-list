@@ -9,9 +9,13 @@ function nodeFactory(value, nextNode) {
 function linkedListFactory() {
   return {
     head: null,
-    tail: null,
     append: function (value) {
-      this.tail = nodeFactory(value);
+      let node = nodeFactory(value);
+      if (this.head === null) {
+        this.head = node;
+      } else {
+        this.tail = node;
+      }
     },
     prepend: function (value) {
       this.head = nodeFactory(value, this.head);
