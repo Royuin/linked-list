@@ -1,5 +1,9 @@
 function nodeFactory(value, nextNode) {
-  return { value, nextNode: null };
+  if (nextNode === undefined) {
+    return { value, nextNode: null };
+  } else {
+    return { value, nextNode };
+  }
 }
 
 function linkedListFactory() {
