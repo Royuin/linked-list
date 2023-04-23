@@ -43,6 +43,11 @@ function linkedListFactory() {
         current = current.nextNode;
       }
 
+      if (this.size === 1) {
+        this.head = null;
+        delete this.tail;
+      }
+
       current.nextNode = null;
       this.tail = current;
       this.size -= 1;
