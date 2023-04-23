@@ -80,5 +80,14 @@ function linkedListFactory() {
       }
       return false;
     },
+    toString: function () {
+      let current = this.head;
+
+      console.log(JSON.stringify(current));
+      while (current.nextNode) {
+        current = current.nextNode;
+        console.log(JSON.stringify(current));
+      }
+    },
   };
 }
