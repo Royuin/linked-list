@@ -29,5 +29,12 @@ function linkedListFactory() {
       this.head = nodeFactory(value, this.head);
       this.size += 1;
     },
+    get: function (index) {
+      let current = this.head;
+      for (let i = 0; i < index; i += 1) {
+        current = current.nextNode;
+      }
+      return current;
+    },
   };
 }
