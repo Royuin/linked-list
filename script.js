@@ -52,5 +52,18 @@ function linkedListFactory() {
       this.tail = current;
       this.size -= 1;
     },
+    find: function (value) {
+      let current = this.head;
+      if (current.value === value) {
+        return 0;
+      }
+      for (let i = 1; i < this.size; i += 1) {
+        current = current.nextNode;
+        if (current.value === value) {
+          return i;
+        }
+      }
+      return null;
+    },
   };
 }
