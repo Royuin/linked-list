@@ -36,5 +36,16 @@ function linkedListFactory() {
       }
       return current;
     },
+    pop: function () {
+      let current = this.head;
+
+      for (let i = 0; i < this.size - 2; i += 1) {
+        current = current.nextNode;
+      }
+
+      current.nextNode = null;
+      this.tail = current;
+      this.size -= 1;
+    },
   };
 }
