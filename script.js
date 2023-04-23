@@ -65,5 +65,20 @@ function linkedListFactory() {
       }
       return null;
     },
+    contains: function (value) {
+      let current = this.head;
+
+      if (current.value === value) {
+        return true;
+      }
+
+      while (current.nextNode) {
+        current = current.nextNode;
+        if (current.value === value) {
+          return true;
+        }
+      }
+      return false;
+    },
   };
 }
