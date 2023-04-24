@@ -1,2 +1,2 @@
-# ds-a
-A practice repo for learning and using data structures and algorithms
+# Linked list
+A practice repo for learning and making linked lists
